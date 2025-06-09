@@ -65,11 +65,11 @@ const Footer = ({ onCallbackClick }) => {
                                 </li>
                                 <li>
                                     <i className="fas fa-phone-alt"></i>
-                                    <p><a href="tel:8287778324">+91 70651 96288</a></p>
+                                    <p><a href="tel:8287778324">+91 8287778324 </a></p>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
-                                    <p><a href="mailto:ypg8324@gmail.com">arreharsh@gmail.com</a></p>
+                                    <p><a href="mailto:ypg8324@gmail.com"> support@laundrymart.co.in </a></p>
                                 </li>
                             </ul>
                         </div>
