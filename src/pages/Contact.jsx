@@ -29,10 +29,10 @@ function Contact() {
               <p>H-599, Nangla Road, Jawahar Colony<br /> Faridabad, Haryana - 121005</p>
 
               <h3>Phone</h3>
-              <p><a href="tel:+91-8287778324">+91 70651 96288</a></p>
+              <p><a href="tel:+91-8287778324">+91 8287778324</a></p>
 
               <h3>Email</h3>
-              <p><a href="mailto:arreharsh@gmail.com">arreharsh@gmail.com</a></p>
+              <p><a href="mailto:ypg8324@gmail.com">support@laundrymart.co.in</a></p>
             </div>
           </div>
         </div>
