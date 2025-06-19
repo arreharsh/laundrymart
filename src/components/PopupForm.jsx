@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import axios from 'axios';
 
 
 const PopupForm = ({ isOpen, onClose }) => {
@@ -8,44 +9,52 @@ const PopupForm = ({ isOpen, onClose }) => {
     const formRef = useRef(null);
 
 
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setMessage('Submitting Request...');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setSuccess(false);
-        setMessage('Submitting Request...');
-
-        const form = formRef.current;
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(
-                'https://script.google.com/macros/s/AKfycbyXdv-3SlbbHingRWfE26g5Y7KFfKgpW8hoon7gq7fUjFb1PFpwmA2mhmONGONGaK8Exw/exec',
-                {
-                    method: 'POST',
-                    body: formData,
-                }
-            );
-
-            if (response.ok) {
-                setSuccess(true);
-                setMessage('Thank You! Your request has been submitted.');
-                form.reset();
-
-                setTimeout(() => {
-                    setLoading(false);
-                    setSuccess(false);
-                    setMessage('Submitting Request...');
-                    onClose(); 
-                }, 2000);
-            } else {
-                throw new Error();
-            }
-        } catch (err) {
-            setMessage('Something went wrong!');
-            setTimeout(() => setLoading(false), 2000);
-        }
+    const form = formRef.current;
+    
+    // Extract plain values
+    const data = {
+        name: form.name.value,
+        mobile: form.phone.value,
+        flatNo: form.flat.value,
+        address: form.address.value,
+        services: form.item.value,
     };
+
+    try {
+        const response = await fetch('https://laundrymart.onrender.com/api/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            setSuccess(true);
+            setMessage('Thank You! Your request has been submitted.');
+            form.reset();
+
+            setTimeout(() => {
+                setLoading(false);
+                setSuccess(false);
+                setMessage('Submitting Request...');
+                onClose(); 
+            }, 2000);
+        } else {
+            throw new Error();
+        }
+    } catch (err) {
+        console.error('Form Error:', err);
+        setMessage('Something went wrong!');
+        setTimeout(() => setLoading(false), 2000);
+    }
+};
 
     const handleOverlayClick = (e) => {
         if (e.target.classList.contains('overlay')) {
