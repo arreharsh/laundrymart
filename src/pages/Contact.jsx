@@ -60,7 +60,7 @@ function Contact() {
               <p><a href="tel:+91-7065196288">+91 70651 96288</a></p>
 
               <h3>Email</h3>
-              <p><a href="mailto:arreharsh@gmail.com">arreharsh@gmail.com</a></p>
+              <p><a href="mailto:arreharsh@gmail.com">support@laundrymart.co.in</a></p>
             </div>
           </div>
         </div>
