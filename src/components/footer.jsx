@@ -65,7 +65,7 @@ const Footer = ({ onCallbackClick }) => {
                                 </li>
                                 <li>
                                     <i className="fas fa-phone-alt"></i>
-                                    <p><a href="tel:8287778324">+91 8287778324 </a></p>
+                                    <p><a href="tel:8287778324">+91 7065196288 </a></p>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
