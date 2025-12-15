@@ -27,7 +27,7 @@ User authentication and real-time chat are handled inside the **Laundry Mart mob
 
 ## ⚙️ Setup
 
-### 1️⃣ Install Dependencies
+### 1️⃣ Install Dependencies & Run
 ```bash
 npm install
 npm run dev
