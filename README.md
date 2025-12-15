@@ -45,10 +45,14 @@ npm run dev
 
 - Order updates are handled through the mobile app
 
+---
+
 ### 🔗 API Integration
 - Booking API
 
 `POST /api/bookings`
+
+---
 
 ### 🔐 Notes
 
@@ -57,7 +61,7 @@ npm run dev
 - Authentication and chat features are available only in the mobile app
 
 - Website is optimized for quick bookings
-
+---
 ### 🎯 Project Purpose
 
 The main website acts as a booking entry point for Laundry Mart customers, making it easy to place orders without requiring authentication.
